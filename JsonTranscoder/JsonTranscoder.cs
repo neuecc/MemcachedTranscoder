@@ -10,6 +10,7 @@ namespace MemcachedTranscoder
     {
         static readonly ConcurrentDictionary<string, Type> readCache = new ConcurrentDictionary<string, Type>();
         static readonly ConcurrentDictionary<Type, string> writeCache = new ConcurrentDictionary<Type, string>();
+        static readonly JsonSerializer jsonSerializer = new JsonSerializer();
 
         protected override object DeserializeObject(ArraySegment<byte> value)
         {
@@ -26,7 +27,7 @@ namespace MemcachedTranscoder
 
                     // read object
                     jr.Read();
-                    var deserializedValue = new JsonSerializer().Deserialize(jr, type);
+                    var deserializedValue = jsonSerializer.Deserialize(jr, type);
 
                     return deserializedValue;
                 }
@@ -48,7 +49,7 @@ namespace MemcachedTranscoder
             {
                 jw.WriteStartArray(); // [
                 jw.WriteValue(typeName); // "type",
-                new JsonSerializer().Serialize(jw, value); // obj
+                jsonSerializer.Serialize(jw, value); // obj
 
                 jw.WriteEndArray(); // ]
 
