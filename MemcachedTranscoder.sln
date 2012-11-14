@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Memcached", "Memcached", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{1C007859-8462-4C50-A964-C2DFB39E7AD0}"
 	ProjectSection(SolutionItems) = preProject
+		Docs\ProtoTranscoder.nuspec = Docs\ProtoTranscoder.nuspec
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject

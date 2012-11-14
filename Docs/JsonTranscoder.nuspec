@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Enyim.Memcached.Transcoders.Json</id>
+        <version>1.0.0.0</version>
+        <title>JsonTranscoder</title>
+        <authors>neuecc</authors>
+        <owners>neuecc</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Memcached Transcoder using Json.NET.</description>
+        <language>en-US</language>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>http://github.com/neuecc/MemcachedTranscoder</projectUrl>
+        <tags>memcached</tags>
+        <dependencies>
+            <dependency id="EnyimMemcached" version="2.12"></dependency>
+            <dependency id="Newtonsoft.Json" version="4.5.10"></dependency>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\JsonTranscoder\bin\Release\JsonTranscoder.dll" target="lib\net40" />
+    </files>
+</package>

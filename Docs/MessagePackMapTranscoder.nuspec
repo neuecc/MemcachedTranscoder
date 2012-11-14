@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Enyim.Memcached.Transcoders.MessagePack.Map</id>
+        <version>1.0.0.0</version>
+        <title>MessagePackMapTranscoder</title>
+        <authors>neuecc</authors>
+        <owners>neuecc</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Memcached Transcoder using MsgPack-Cli, Map-Mode.</description>
+        <language>en-US</language>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>http://github.com/neuecc/MemcachedTranscoder</projectUrl>
+        <tags>memcached</tags>
+        <dependencies>
+            <dependency id="EnyimMemcached" version="2.12"></dependency>
+            <dependency id="MsgPack.Cli" version="0.3"></dependency>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\MessagePackMapTranscoder\bin\Release\MessagePackMapTranscoder.dll" target="lib\net40" />
+    </files>
+</package>
