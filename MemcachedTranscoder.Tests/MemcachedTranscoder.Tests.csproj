@@ -67,6 +67,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ChainingAssertion.MSTest.cs" />
+    <Compile Include="Json\MemcachedTest.cs" />
+    <Compile Include="Json\TranscoderTest.cs" />
+    <Compile Include="MessagePackMap\MemcachedTest.cs" />
+    <Compile Include="MessagePackMap\TranscoderTest.cs" />
     <Compile Include="MessagePack\MemcachedTest.cs" />
     <Compile Include="MessagePack\TranscoderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
