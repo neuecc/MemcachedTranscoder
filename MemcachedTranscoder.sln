@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonTranscoder", "JsonTranscoder\JsonTranscoder.csproj", "{2F9D4A82-8304-42FD-BDE5-FB501EC35A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackTranscoder", "MessagePackTranscoder\MessagePackTranscoder.csproj", "{FFDD889C-2F1B-4FE4-A82B-860C4C23648B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoTranscoder", "ProtoTranscoder\ProtoTranscoder.csproj", "{FF1125A6-4572-452E-A1DC-2CD8405F9684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackMapTranscoder", "MessagePackMapTranscoder\MessagePackMapTranscoder.csproj", "{129EC273-EC00-4A7C-AF1E-B7E4FA395DB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Memcached", "Memcached", "{7EF475B7-3C38-4AD1-A443-62CF4D204552}"
+	ProjectSection(SolutionItems) = preProject
+		Memcached\memcached.exe = Memcached\memcached.exe
+		Memcached\pthreadGC2.dll = Memcached\pthreadGC2.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{1C007859-8462-4C50-A964-C2DFB39E7AD0}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemcachedTranscoder.Tests", "MemcachedTranscoder.Tests\MemcachedTranscoder.Tests.csproj", "{5D2655FE-D0FF-4927-BE15-77031ED508BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C5ADD99-D138-41D5-9D6A-F92102BD41B4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{FF69E5A1-F09F-48D4-BE07-EAA744FDDD29}"
+	ProjectSection(SolutionItems) = preProject
+		Common\CommonAssemblyInfo.cs = Common\CommonAssemblyInfo.cs
+		Common\TypeHelper.cs = Common\TypeHelper.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F9D4A82-8304-42FD-BDE5-FB501EC35A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9D4A82-8304-42FD-BDE5-FB501EC35A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9D4A82-8304-42FD-BDE5-FB501EC35A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9D4A82-8304-42FD-BDE5-FB501EC35A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDD889C-2F1B-4FE4-A82B-860C4C23648B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDD889C-2F1B-4FE4-A82B-860C4C23648B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDD889C-2F1B-4FE4-A82B-860C4C23648B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDD889C-2F1B-4FE4-A82B-860C4C23648B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1125A6-4572-452E-A1DC-2CD8405F9684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1125A6-4572-452E-A1DC-2CD8405F9684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1125A6-4572-452E-A1DC-2CD8405F9684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1125A6-4572-452E-A1DC-2CD8405F9684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129EC273-EC00-4A7C-AF1E-B7E4FA395DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129EC273-EC00-4A7C-AF1E-B7E4FA395DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129EC273-EC00-4A7C-AF1E-B7E4FA395DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129EC273-EC00-4A7C-AF1E-B7E4FA395DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2655FE-D0FF-4927-BE15-77031ED508BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2655FE-D0FF-4927-BE15-77031ED508BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2655FE-D0FF-4927-BE15-77031ED508BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2655FE-D0FF-4927-BE15-77031ED508BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
