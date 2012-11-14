@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿extern alias pt;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using TopNamespace.SubNameSpace;
@@ -44,7 +46,7 @@ namespace MemcachedTranscoder.Tests
 
         public void CheckType(Type type, string typeName)
         {
-            TypeHelper.BuildTypeName(type).Is(typeName);
+            pt::MemcachedTranscoder.TypeHelper.BuildTypeName(type).Is(typeName);
             Type.GetType(typeName).Is(type);
         }
 

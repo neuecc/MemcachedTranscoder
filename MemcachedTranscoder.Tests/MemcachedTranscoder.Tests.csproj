@@ -67,6 +67,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ChainingAssertion.MSTest.cs" />
+    <Compile Include="MessagePack\MemcachedTest.cs" />
+    <Compile Include="MessagePack\TranscoderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proto\MemcachedTest.cs" />
     <Compile Include="Proto\TranscoderTest.cs" />
@@ -92,6 +94,7 @@
     <ProjectReference Include="..\ProtoTranscoder\ProtoTranscoder.csproj">
       <Project>{ff1125a6-4572-452e-a1dc-2cd8405f9684}</Project>
       <Name>ProtoTranscoder</Name>
+      <Aliases>pt</Aliases>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
