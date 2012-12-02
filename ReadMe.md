@@ -93,13 +93,13 @@ var array = Enumerable.Range(1, 10)
     .ToArray();
 ```
 
-S is Serialize(millisecond)  
-D is Deserialize(millisecond)  
-Size is byte
-
 ![](https://github.com/neuecc/MemcachedTranscoder/blob/master/Docs/poco.jpg?raw=true)
 
 ![](https://github.com/neuecc/MemcachedTranscoder/blob/master/Docs/array.jpg?raw=true)
+
+S is Serialize(millisecond)  
+D is Deserialize(millisecond)  
+Size is byte
 
 ```text
 Simple POCO************************
