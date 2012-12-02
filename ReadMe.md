@@ -142,3 +142,6 @@ S MessagePackMapTranscoder:1453
 D MessagePackMapTranscoder:5088
 Size:736
 ```
+
+DefaultTranscoder = BinaryFormatter  
+DataContractTranscoder = NetDetaContractSerializer
