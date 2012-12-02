@@ -14,7 +14,7 @@
         <tags>memcached</tags>
         <dependencies>
             <dependency id="EnyimMemcached" version="2.12"></dependency>
-            <dependency id="Newtonsoft.Json" version="4.5.10"></dependency>
+            <dependency id="Newtonsoft.Json" version="4.5.11"></dependency>
         </dependencies>
     </metadata>
     <files>

@@ -43,7 +43,7 @@ namespace MemcachedTranscoder
         protected override ArraySegment<byte> SerializeObject(object value)
         {
             var type = value.GetType();
-            var typeName = writeCache.GetOrAdd(type, x => TypeHelper.BuildTypeName(x)); // Get type or Register type
+            var typeName = writeCache.GetOrAdd(type, TypeHelper.BuildTypeName); // Get type or Register type
 
             using (var ms = new MemoryStream())
             {

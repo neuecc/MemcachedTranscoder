@@ -76,7 +76,7 @@ namespace MemcachedTranscoder
             var typeArray = writeCache.GetOrAdd(type, x =>
             {
                 var typeName = TypeHelper.BuildTypeName(x);
-                var buffer = Encoding.UTF8.GetBytes(typeName);
+                var buffer = defaultEncoding.GetBytes(typeName);
                 return buffer;
             });
 

@@ -23,6 +23,15 @@ namespace MemcachedTranscoder.PerfTest
         [ProtoMember(4)]
         [MessagePackMember(3)]
         public bool MyProperty4 { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            var tc = (TestClass)obj;
+            return this.MyProperty1 == tc.MyProperty1
+                && this.MyProperty2 == tc.MyProperty2
+                && this.MyProperty3 == tc.MyProperty3
+                && this.MyProperty4 == tc.MyProperty4;
+        }
     }
 
     class Program
@@ -32,6 +41,10 @@ namespace MemcachedTranscoder.PerfTest
             // warmup and copy
             var item = transcoder.Serialize(data);
             var ___ = transcoder.Deserialize(item);
+
+            var comparer = System.Collections.StructuralComparisons.StructuralEqualityComparer;
+            if (!comparer.Equals(data, ___)) throw new Exception("failed");
+
             var items = Enumerable.Range(0, repeat).Select(_ =>
             {
                 return new CacheItem(item.Flags, new ArraySegment<byte>(item.Data.Array.ToArray(), item.Data.Offset, item.Data.Count));
@@ -49,7 +62,7 @@ namespace MemcachedTranscoder.PerfTest
             }
 
             sw.Stop();
-            Console.WriteLine("S " + transcoder.GetType().Name + ":" + sw.Elapsed);
+            Console.WriteLine("S " + transcoder.GetType().Name + ":" + (int)sw.Elapsed.TotalMilliseconds);
             sw.Restart();
 
             foreach (var x in items)
@@ -58,7 +71,7 @@ namespace MemcachedTranscoder.PerfTest
             }
 
             sw.Stop();
-            Console.WriteLine("D " + transcoder.GetType().Name + ":" + sw.Elapsed);
+            Console.WriteLine("D " + transcoder.GetType().Name + ":" + (int)sw.Elapsed.TotalMilliseconds);
             Console.WriteLine("Size:" + item.Data.Count);
         }
 
@@ -68,7 +81,7 @@ namespace MemcachedTranscoder.PerfTest
             {
                 MyProperty1 = "hoge",
                 MyProperty2 = 1,
-                MyProperty3 = new DateTime(1999, 12, 11),
+                MyProperty3 = new DateTime(1999, 12, 11, 0, 0, 0, DateTimeKind.Utc),
                 MyProperty4 = true
             };
 
@@ -77,7 +90,7 @@ namespace MemcachedTranscoder.PerfTest
                 {
                     MyProperty1 = "hoge" + i,
                     MyProperty2 = i,
-                    MyProperty3 = new DateTime(1999, 12, 11).AddDays(i),
+                    MyProperty3 = new DateTime(1999, 12, 11, 0, 0, 0, DateTimeKind.Utc).AddDays(i),
                     MyProperty4 = i % 2 == 0
                 })
                 .ToArray();
@@ -85,6 +98,7 @@ namespace MemcachedTranscoder.PerfTest
             Console.WriteLine("Simple POCO************************");
 
             var count = 100000;
+
             Bench(obj, new DefaultTranscoder(), count);
             Bench(obj, new DataContractTranscoder(), count);
             Bench(obj, new ProtoTranscoder(), count);
