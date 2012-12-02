@@ -97,6 +97,10 @@ S is Serialize(millisecond)
 D is Deserialize(millisecond)  
 Size is byte
 
+[[/Docs/poco.jpg]]
+
+[[/Docs/array.jpg]]
+
 ```text
 Simple POCO************************
 S DefaultTranscoder:735
