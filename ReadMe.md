@@ -93,6 +93,8 @@ var array = Enumerable.Range(1, 10)
     .ToArray();
 ```
 
+speed of 100000 iteration(size is single).
+
 ![](https://github.com/neuecc/MemcachedTranscoder/blob/master/Docs/poco.jpg?raw=true)
 
 ![](https://github.com/neuecc/MemcachedTranscoder/blob/master/Docs/array.jpg?raw=true)
