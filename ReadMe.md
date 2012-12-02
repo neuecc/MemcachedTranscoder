@@ -97,9 +97,9 @@ S is Serialize(millisecond)
 D is Deserialize(millisecond)  
 Size is byte
 
-[[/Docs/poco.jpg]]
+![](https://github.com/neuecc/MemcachedTranscoder/blob/master/Docs/poco.jpg?raw=true)
 
-[[/Docs/array.jpg]]
+![](https://github.com/neuecc/MemcachedTranscoder/blob/master/Docs/array.jpg?raw=true)
 
 ```text
 Simple POCO************************
